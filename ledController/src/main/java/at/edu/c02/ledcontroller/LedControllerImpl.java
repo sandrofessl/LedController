@@ -79,8 +79,8 @@ public class LedControllerImpl implements LedController {
                 JSONObject temp = tempArray.getJSONObject(j);
                 int id = temp.getInt("id");
                 apiService.putLight(id, "#FF5733", false);
-                return;
             }
+            return;
         }
     }
 }
