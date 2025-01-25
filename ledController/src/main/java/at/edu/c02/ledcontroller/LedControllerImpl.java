@@ -80,6 +80,7 @@ public class LedControllerImpl implements LedController {
                 int id = temp.getInt("id");
                 apiService.putLight(id, "#FF5733", false);
             }
+            return;
         }
     }
 }

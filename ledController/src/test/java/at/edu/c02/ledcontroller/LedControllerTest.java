@@ -9,8 +9,7 @@ import org.mockito.Mockito;
 
 import java.io.IOException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 
@@ -23,6 +22,7 @@ public class LedControllerTest {
     public void dummyTest() {
         assertEquals(1, 1);
     }
+
     @Test
     public void testGetGroupLeds() throws IOException {
 
@@ -35,6 +35,7 @@ public class LedControllerTest {
             count++;
         }
     }
+
     @Test
     public void testGetGroupLedsMock() throws IOException {
         ApiService apiServiceMock = Mockito.mock(ApiService.class);
@@ -56,9 +57,30 @@ public class LedControllerTest {
         int count = 28;
         for (int i = 0; i < result.length(); i++) {
             JSONObject light = result.getJSONObject(i);
-            assertEquals(light.getInt("id"),count);
+            assertEquals(light.getInt("id"), count);
             count++;
         }
+    }
+
+    @Test
+    public void testOneLED() throws IOException {
+        LedController ledController = new LedControllerImpl(new ApiServiceImpl());
+        ledController.putLight(33, "#fff", true);
+
+        ApiService apiService = new ApiServiceImpl();
+
+        JSONObject response = apiService.getLight(33);
+        // get the "lights" array from the response
+        JSONArray lights = response.getJSONArray("lights");
+        // read the first json object of the lights array
+        JSONObject firstLight = lights.getJSONObject(0);
+
+        assertEquals(firstLight.getInt("id"), 33);
+        assertTrue(firstLight.getString("color").equalsIgnoreCase("#fff"));
+
+//        System.out.println("light id is: " + firstLight.getInt("id"));
+//        System.out.println("light color is: " + firstLight.getString("color"));
+
     }
 
 
