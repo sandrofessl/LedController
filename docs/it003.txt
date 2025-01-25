@@ -1,7 +1,7 @@
 Sprint Planning
 Gruppe I
 
-Sprint 1 – Ablauf Iteration 2
+Sprint 3 – Ablauf Iteration 3
 Story	UserPoints	Paar	Hängt ab von	Tasks
 				
 Story 2.1	5	Sarcomax		-           -
