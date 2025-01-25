@@ -12,6 +12,10 @@ public class Main {
         LedController ledController = new LedControllerImpl(new ApiServiceImpl());
 
         String input = "";
+        String input1 = "";
+        String input2 = "";
+        String input3 = "";
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (!input.equalsIgnoreCase("exit")) {
             System.out.println("=== LED Controller ===");
@@ -31,6 +35,20 @@ public class Main {
                 ledController.getOneLed(Integer.parseInt(input));
 
             }
+            if (input.equalsIgnoreCase("scholtein")) {
+                System.out.println("Please specify LED");
+                input1 = reader.readLine();
+                System.out.println("Please specify Color");
+                input2 = reader.readLine();
+                System.out.println("Please specify state");
+                input3 = reader.readLine();
+
+                ledController.putLight(Integer.parseInt(input1),input2, Boolean.parseBoolean(input3));
+
+
+            }
+
+
 
         }
 

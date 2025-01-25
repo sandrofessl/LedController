@@ -1,0 +1,22 @@
+Sprint Planning
+Gruppe I
+
+Sprint 1 – Ablauf Iteration 2
+Story	UserPoints	Paar	Hängt ab von	Tasks
+				
+Story 2.1	5	Sarcomax		-           -
+
+
+Daily Meeting 1
+Pair Programming am Laufen
+Aktuelle sieht Umsetzung realistisch aus
+
+Daily Meeting 2:
+ajey... es wird immer schircher
+
+Retrospective:
+Team ist nicht gewohnt, stundenlang zu programmieren. Konzentration und Kompetenzen reichen nicht mehr aus.
+
+
+
+
