@@ -9,7 +9,10 @@ Story 2.2   1       DoubleMax
 Organisatorische Aktivitäten --> Marco
 
 Daily Meeting 1
-
+Sandros Task evt nicht mehr umsetzbar in diesem Sprint
+DoubleMax ist gleich fertig
+Update: DoubleMax is fertig
+Marco fühlt sich machtvoll
 
 Daily Meeting 2:
 
