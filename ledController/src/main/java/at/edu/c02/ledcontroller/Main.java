@@ -20,6 +20,8 @@ public class Main {
         while (!input.equalsIgnoreCase("exit")) {
             System.out.println("=== LED Controller ===");
             System.out.println("Enter 'demo' to send a demo request");
+            System.out.println("Enter 'scholtein' to send a demo request");
+            System.out.println("Enter 'scholtaus' to send a demo request");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
             if (input.equalsIgnoreCase("demo")) {
@@ -45,6 +47,10 @@ public class Main {
 
                 ledController.putLight(Integer.parseInt(input1),input2, Boolean.parseBoolean(input3));
 
+
+            }
+            if (input.equalsIgnoreCase("scholtaus")) {
+                ledController.turnOffAll();
 
             }
 
