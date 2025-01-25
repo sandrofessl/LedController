@@ -13,18 +13,29 @@ public class Main {
 
         String input = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while(!input.equalsIgnoreCase("exit"))
-        {
+        while (!input.equalsIgnoreCase("exit")) {
             System.out.println("=== LED Controller ===");
             System.out.println("Enter 'demo' to send a demo request");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
-            if(input.equalsIgnoreCase("demo"))
-            {
+            if (input.equalsIgnoreCase("demo")) {
+                ledController.demo();
+            }
+            if (input.equalsIgnoreCase("groupstatus")) {
                 ledController.getGroupLeds();
             }
+
+            if (input.equalsIgnoreCase("status")) {
+                System.out.println("Please specify LED");
+                input = reader.readLine();
+                ledController.getOneLed(Integer.parseInt(input));
+
+            }
+
         }
 
     }
 
 }
+
+
