@@ -71,4 +71,15 @@ public class LedControllerImpl implements LedController {
         // read the first json object of the lights array
       //
     }
+    public void turnOffAll() throws IOException {
+        // Call `getLights`, the response is a json object in the form `{ "lights": [ { ... }, { ... } ] }`
+        for (int i = 28; i < 36; i++) {
+            JSONArray tempArray = getGroupLeds();
+            for (int j = 0; j < tempArray.length(); j++) {
+                JSONObject temp = tempArray.getJSONObject(j);
+                int id = temp.getInt("id");
+                apiService.putLight(id, "#FF5733", false);
+            }
+        }
+    }
 }
