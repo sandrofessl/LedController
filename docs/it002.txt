@@ -1,0 +1,20 @@
+Sprint Planning
+Gruppe I
+
+Sprint 1 – Ablauf Iteration 2
+Story	UserPoints	Paar	Hängt ab von	Tasks
+				
+Story 1.1.3	3	Sarco		-
+Story 1.2	4	Maxfan		-
+Story 1.3   4   Sarco
+
+Daily Meeting 1
+
+
+Daily Meeting 2:
+
+
+Retrospective:
+
+
+
