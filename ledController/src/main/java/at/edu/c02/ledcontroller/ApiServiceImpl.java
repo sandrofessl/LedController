@@ -37,7 +37,6 @@ public class ApiServiceImpl implements ApiService {
 
         String jsonText = establishCommunication(url);
         return new JSONObject(jsonText);
-
 }
 
 

@@ -28,6 +28,7 @@ public class LedControllerImpl implements LedController {
         // read int and string properties of the light
         System.out.println("First light id is: " + firstLight.getInt("id"));
         System.out.println("First light color is: " + firstLight.getString("color"));
+
     }
 
     @Override
@@ -46,5 +47,18 @@ public class LedControllerImpl implements LedController {
         }
         return groupLight;
 
+    }
+
+    @Override
+    public void getOneLed(int id) throws IOException {
+        // Call `getLights`, the response is a json object in the form `{ "lights": [ { ... }, { ... } ] }`
+        JSONObject response = apiService.getLight(id);
+        // get the "lights" array from the response
+        JSONArray lights = response.getJSONArray("lights");
+        // read the first json object of the lights array
+        JSONObject firstLight = lights.getJSONObject(0);
+        // read int and string properties of the light
+        System.out.println("light id is: " + firstLight.getInt("id"));
+        System.out.println("light color is: " + firstLight.getString("color"));
     }
 }
