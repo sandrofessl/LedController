@@ -21,8 +21,10 @@ public class Main {
             input = reader.readLine();
             if(input.equalsIgnoreCase("demo"))
             {
-                ledController.demo();
+                ledController.getGroupLeds();
             }
         }
+
     }
+
 }
