@@ -13,7 +13,7 @@ Daily Meeting 1
 
 Daily Meeting 2:
 1.1.3. erledigt
-Story 1.2 ist erledigt ohne Tests --> wird nach gemeinsamen Beschluss nicht erledigt
+Story 1.2 ist erledigt
 Story 1.3. ist erledigt
 
 Retrospective:
